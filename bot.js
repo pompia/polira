@@ -1,7 +1,9 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const client2 = new Discord.Client();
-var prefix = "*";
+
+client.on('message', message => {
+        var prefix = "*";
         if (message.author.bot) return;
         if (!message.content.startsWith(prefix)) return;
 
@@ -18,7 +20,7 @@ var prefix = "*";
 
 
       });
-
+ 
 client.on('ready', () => {
    console.log(`----------------`);
    console.log(`Credit Farmm - Script By : AKRAM `);
